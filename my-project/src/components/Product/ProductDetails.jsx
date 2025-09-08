@@ -1,46 +1,126 @@
-export default function ProductDetails() {
+import React, { useState } from "react";
+import {  Star } from 'lucide-react'
+
+const AccordionItem = ({ title, children, isOpen, onClick }) => {
   return (
-    <section className="flex flex-col gap-6 h-full ">
-      <header className="space-y-2">
-        <h1 className="text-pretty text-2xl font-semibold">
-          Pharma Dry Syrup Bottles (10ml)
+    <div className=" border-b-2 border-black">
+      <button
+        className="flex w-full items-center justify-between p-4 text-base font-medium cursor-pointer"
+        onClick={onClick}
+      >
+        {title}
+        <span
+          className={`transition-transform duration-300 text-3xl ${
+            isOpen ? "rotate-180" : ""
+          }`}
+        >
+          {isOpen ? "−" : "+"}
+        </span>
+      </button>
+
+      {/* Animated content */}
+      <div
+        className={`grid transition-all duration-500 ease-in-out ${
+          isOpen
+            ? "grid-rows-[1fr] opacity-100"
+            : "grid-rows-[0fr] opacity-0"
+        }`}
+      >
+        <div className="overflow-hidden px-4 pb-4">{children}</div>
+      </div>
+    </div>
+  );
+};
+
+const ProductDetails = ({ product }) => {
+  const [selectedSize, setSelectedSize] = useState("5ml");
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleAccordion = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  const handleSizeSelect = (size) => {
+    setSelectedSize(size);
+  };
+
+  return (
+    <section className="flex flex-col gap-6 h-full">
+      <header className="space-y-2 lg:flex gap-3">
+        <h1 className="text-pretty text-2xl  font-semibold">
+          {product.name}{" "}
+          {selectedSize && (
+            <span className="text-[#2592AD]">({selectedSize})</span>
+          )}
         </h1>
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
-          <span aria-label="rating" title="4.8 out of 5">
-            ★★★★★
+                   <div className='flex items-center gap-1 my-1'>
+  {[...Array(5)].map((_, index) => (
+    <Star 
+      key={index} 
+      className={index < product.rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'} 
+      size={18}
+    />
+  ))}
+</div>
+          <span className="text-foreground/80">
+            ({product.reviews} reviews)
           </span>
-          <span className="text-foreground/80">(49 reviews)</span>
         </div>
       </header>
-
-      <p className="max-w-prose leading-relaxed text-foreground">
-        Durable and hygienic bottles specially designed for safe storage of dry syrups...
+      <p className="max-w-3xl leading-relaxed text-foreground ">
+        {product.description}
       </p>
+      <div className="h-[2px] w-full bg-black"></div>
 
-      <details className="rounded-md border p-4">
-        <summary className="cursor-pointer text-base font-medium">
-          Product Specifications
-        </summary>
-        <div className="mt-3 text-sm leading-6">
-          • Food-grade material • Tamper-evident cap • Standard neck size • Recyclable
+
+      
+      <AccordionItem
+        title="Product Specifications"
+        isOpen={openIndex === 0}
+        onClick={() => toggleAccordion(0)}
+      >
+        <div className="mt-3 text-sm leading-6 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2">
+          {product.specs?.map((spec, idx) => (
+            <div key={idx} className="flex justify-between">
+              <span className="font-medium">{spec.label}</span>
+              <span className="text-muted-foreground">: {spec.value}</span>
+            </div>
+          ))}
         </div>
-      </details>
+      </AccordionItem>
 
-      <details className="rounded-md border p-4">
-        <summary className="cursor-pointer text-base font-medium">
-          Product Size
-        </summary>
-        <div className="mt-3 text-sm leading-6">
-          10ml (custom sizes available on request)
+     
+      <AccordionItem
+        title="Product Sizes"
+        isOpen={openIndex === 1}
+        onClick={() => toggleAccordion(1)}
+      >
+        <div className="mt-3 text-sm leading-6 grid grid-cols-3 sm:grid-cols-5  lg:grid-cols-9 gap-3">
+          {product.sizes?.map((size, idx) => (
+            <button
+              key={idx}
+              onClick={() => handleSizeSelect(size)}
+              className={`px-3 py-1 border transition ${
+                selectedSize === size
+                  ? "bg-[#2592AD] text-white border-[#2592AD]"
+                  : "hover:border-[#2592AD] text-gray-700"
+              }`}
+            >
+              {size}
+            </button>
+          ))}
         </div>
-      </details>
+      </AccordionItem>
 
-      {/* Push button to bottom */}
+   
       <div className="mt-auto">
-        <button className="inline-flex items-center justify-center  bg-[#2592AD] px-5 py-3 text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 w-full sm:w-auto">
+        <button className="inline-flex items-center justify-center bg-[#2592AD] px-5 py-3 text-sm font-medium text-white hover:bg-[#1d95b3] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2592AD] w-full sm:w-auto">
           SEND INQUIRY
         </button>
       </div>
     </section>
-  )
-}
+  );
+};
+
+export default ProductDetails;
