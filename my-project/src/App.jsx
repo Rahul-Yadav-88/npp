@@ -33,6 +33,8 @@ import Layout from './Layout'
 import Home from './app/Home/Home'
 import About from './app/About/About'
 import ProductPage from './app/ProductPage/ProductPage'
+import Contact from './app/Contact/contact'
+
 
 
 
@@ -54,6 +56,10 @@ const router = createBrowserRouter([
       {
         path: "/products/:id",
         element: <ProductPage />
+      },
+      {
+        path: "/contact",
+        element: <Contact />
       },
 
 

@@ -82,7 +82,9 @@ const Navbar = () => {
 
           {/* Center Logo */}
           <div className="flex-shrink-0">
-            <img src='/logo.png' alt="Company Logo" className="w-40 object-contain" />
+            <Link to="/">
+              <img src='/logo.png' alt="Company Logo" className="w-40 object-contain" />
+            </Link>
           </div>
 
           {/* Right Navigation */}
