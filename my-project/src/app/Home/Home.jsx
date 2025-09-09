@@ -1,9 +1,12 @@
-import React from 'react'
 
+import React from 'react'
+import Hero from '../../components/home/hero'
+import Second from '../../components/home/second'
 const Home = () => {
   return (
-    <div className='mt-10'>
-      Hello home
+    <div>
+      <Hero />
+      <Second />
     </div>
   )
 }
