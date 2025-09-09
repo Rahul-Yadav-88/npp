@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import LotionBottlesPage from "./app/Product/components/Loitonbottle";
-import ProductPage from "./app/Product/Product";
-=======
 // import ChuranBottle from "./app/Product/ChuranBottle";
 // import CreamJar from "./app/Product/CreamJars";
 // import DropperBottle from "./app/Product/DropperBottle";
@@ -18,7 +14,6 @@ import ProductPage from "./app/Product/Product";
 // import StopperCAM from "./app/Product/StopperCAM";
 // import ToiletCleaner from "./app/Product/ToiletCleaner";
 // import Navbar from "./components/Product/Navbar/navbar";
->>>>>>> 7249395194a81dbc3e8588b1d6a5eac9158c21d8
 
 
 
@@ -83,15 +78,8 @@ const router = createBrowserRouter([
 
 const App = () => {
   return (
-<<<<<<< HEAD
-    <div className="">
-      <ProductPage/>
-      <LotionBottlesPage/>
-=======
     <div>
       <RouterProvider router={router} />
-
->>>>>>> 7249395194a81dbc3e8588b1d6a5eac9158c21d8
     </div>
   )
 }
