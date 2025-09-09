@@ -1,4 +1,3 @@
-import { MessageCircle } from "lucide-react"
 
 export default function Home() {
   return (
@@ -19,7 +18,7 @@ export default function Home() {
          </div>
 
           {/* Right side - Text content */}
-          <div className="flex-1 text-white">
+          <div className="flex-1 text-white"> 
             
             <h2 className="text-4xl font-bold text-center leading-tight">
               Your Partner in Precision
@@ -32,13 +31,7 @@ export default function Home() {
 
       {/* Main Content */}
       <main className="max-w-4xl mx-auto px-6 py-16 relative">
-        {/* <div
-          className="absolute inset-0 opacity-30 bg-cover bg-center bg-no-repeat pointer-events-none"
-          style={{
-            backgroundImage:
-              "url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/about-azS6rR6sBxq3Jzs9rxylhhGwEnYMV3.png)",
-          }}
-        ></div> */}
+        
 
         <div className="space-y-12 relative z-10">
           {/* Precision in Every Package */}
