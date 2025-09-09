@@ -1,15 +1,28 @@
-
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
+
+  // ✅ Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   // ✅ Categories Array
   const categories = [
@@ -28,7 +41,6 @@ const Navbar = () => {
     { name: "Pharmaceutical Rubber Dropper Assembly", path: "/products/13" },
     { name: "Stopper CAM Lock fittings for Cold rooms PUF Panels", path: "/products/14" },
     { name: "Churan Bottle Set", path: "/products/15" },
-
   ];
   
   return (
@@ -46,7 +58,7 @@ const Navbar = () => {
             </Link>
 
             {/* Dropdown Menu */}
-            <div className="relative">
+            <div className="relative" ref={dropdownRef}>
               <button
                 onClick={toggleDropdown}
                 className="flex items-center text-gray-700 font-medium transition-colors duration-200"
@@ -178,4 +190,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar
+export default Navbar;

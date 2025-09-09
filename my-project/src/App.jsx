@@ -1,30 +1,3 @@
-// import LotionBottlesPage from "./app/Product/components/Loitonbottle";
-// import ProductPage from "./app/Product/Product";
-
-
-
-// export default function App() {
-//   return (
-//     <div className="">
-//       <Navbar/>
-//       <Pharma/>
-//       <MeasuringSpoon/>
-//       <RoppCaps/>
-//       <CreamJar/>
-//       <ShampooBottle/>
-//       <LotionBottle/>
-//       <OilBottles/>
-//       <PharmaceuticalRubber/>
-//       <FloorCleaner/>
-//       <ToiletCleaner/>
-//       <HandWash/>
-//       <StopperCAM/>
-//       <ChuranBottle/>
-//       <DropperBottle/>
-//       <FlipOff/>
-//     </div>
-//   )
-// }
 
 
 
