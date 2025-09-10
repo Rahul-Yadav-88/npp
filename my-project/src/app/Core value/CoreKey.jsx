@@ -1,6 +1,6 @@
 import React from 'react'
-import Core from './Core'
-import CoreValuesPage from './CoreValuesPage'
+import Core from '../../components/Core Key/Core'
+import CoreValuesPage from '../../components/Core Key/CoreValuesPage'
 
 const CoreKey = () => {
   return (

@@ -6,9 +6,7 @@ import Footer from "./components/Footer/footer"
 const Layout = () => {
   return (
     <div className="min-h-screen w-full">
-  
-  
-      
+       
           <Navbar />
        
 
