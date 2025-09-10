@@ -1,8 +1,6 @@
-"use client"
-
 import { useState, useEffect } from "react"
-// import { button } from "@/components/ui/button"
 import { MessageCircle } from "lucide-react"
+import { useNavigate } from 'react-router-dom';
 
 const slides = [
   {
@@ -41,7 +39,10 @@ const slides = [
 
 export default function ProductSlider() {
   const [currentSlide, setCurrentSlide] = useState(0)
-
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate('/contact');  // Navigates to contact page
+  };
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length)
@@ -101,7 +102,7 @@ export default function ProductSlider() {
           <div className="flex gap-4">
             <button
               className="bg-teal-500 hover:bg-teal-600 text-white px-8 py-3 rounded-none font-medium"
-              onClick={() => console.log("Send Inquiry clicked")}
+              onClick={handleClick}
             >
               Send Inquiry
             </button>
@@ -120,7 +121,7 @@ export default function ProductSlider() {
           {/* Product Image */}
           <div className="absolute inset-0 flex items-end justify-center">
             <div className="">
-             
+
               {/* Product Image */}
               <div className="">
                 <img
@@ -140,9 +141,8 @@ export default function ProductSlider() {
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-              index === currentSlide ? "bg-gray-800" : "bg-gray-400"
-            }`}
+            className={`w-3 h-3 rounded-full transition-colors duration-200 ${index === currentSlide ? "bg-gray-800" : "bg-gray-400"
+              }`}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
