@@ -76,16 +76,7 @@ export default function ProductSlider() {
         <div className="w-1/2 flex flex-col justify-center px-12 lg:px-16">
           {/* Logo */}
           <div className="mb-8">
-            <div className="flex items-center gap-2 mb-2">
-              <div className="w-8 h-8 bg-teal-500 rounded-full flex items-center justify-center">
-                <div className="w-4 h-4 bg-white rounded-full"></div>
-              </div>
-              <div>
-                <div className="text-teal-600 font-bold text-lg tracking-wider">NEELAM</div>
-                <div className="text-xs text-gray-600 tracking-widest">PRINT PACK</div>
-              </div>
-            </div>
-            <div className="text-xs text-gray-500 tracking-wide">BEST IN WHATEVER WE DO</div>
+                        <img src="/logo.png" alt="Company Logo" className="w-72 h-16 " />
           </div>
 
           {/* Product Title */}
