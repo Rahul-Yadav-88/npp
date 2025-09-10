@@ -2,13 +2,8 @@ import { Phone, Mail, MapPin } from "lucide-react"
 
 export default function Footer() {
   return (
-<<<<<<< HEAD:my-project/src/components/Product/Footer/footer.jsx
-    <footer className="bg-[#2592ad] text-white mt-10">
-      <div className="container mx-auto px-6 py-8">
-=======
     <footer className="bg-[#2592ad] text-white">
       <div className="container mx-auto px-10 py-8 ">
->>>>>>> b2c99f8049bf4ab58102ea9256745fd9c2feeaaa:my-project/src/components/Footer/footer.jsx
         {/* Main footer content */}
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
           {/* Company info */}
