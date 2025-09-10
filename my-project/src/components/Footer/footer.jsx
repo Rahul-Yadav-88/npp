@@ -2,26 +2,31 @@ import { Phone, Mail, MapPin } from "lucide-react"
 
 export default function Footer() {
   return (
+<<<<<<< HEAD:my-project/src/components/Product/Footer/footer.jsx
     <footer className="bg-[#2592ad] text-white mt-10">
       <div className="container mx-auto px-6 py-8">
+=======
+    <footer className="bg-[#2592ad] text-white">
+      <div className="container mx-auto px-10 py-8 ">
+>>>>>>> b2c99f8049bf4ab58102ea9256745fd9c2feeaaa:my-project/src/components/Footer/footer.jsx
         {/* Main footer content */}
-        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
           {/* Company info */}
-          <div className="flex-1">
-            <h3 className="text-lg font-medium">Neelam Print'o'Pack | Specialty Chemical Manufacturer</h3>
+          <div className="flex">
+            <h3 className="text-md font-medium">Neelam Print'o'Pack | Specialty Chemical Manufacturer</h3>
           </div>
 
           {/* Contact info */}
-          <div className="flex flex-col sm:flex-row gap-4 lg:gap-8 flex-1 lg:justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 lg:gap-4 flex-1 lg:justify-center">
             <div className="flex items-center gap-2">
               <Phone className="h-4 w-4" />
               <span>+91-XXXXXXXXX</span>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex border-l pl-2 items-center gap-2">
               <Mail className="h-4 w-4" />
               <span>neelampop@gmail.com</span>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex border-l pl-2 items-center gap-2">
               <MapPin className="h-4 w-4" />
               <span>Baddi, Himachal Pradesh</span>
             </div>
@@ -31,7 +36,7 @@ export default function Footer() {
           <div className="flex gap-3 lg:justify-end">
             <a
               href="#"
-              className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors"
+              className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/50 transition-colors hover:text-black"
               aria-label="Instagram"
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -40,7 +45,7 @@ export default function Footer() {
             </a>
             <a
               href="#"
-              className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors"
+              className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/50 transition-colors hover:text-black"
               aria-label="Facebook"
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -49,7 +54,7 @@ export default function Footer() {
             </a>
             <a
               href="#"
-              className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors"
+              className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/50 transition-colors hover:text-black"
               aria-label="LinkedIn"
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -58,7 +63,7 @@ export default function Footer() {
             </a>
             <a
               href="#"
-              className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors"
+              className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/50 transition-colors hover:text-black"
               aria-label="X (Twitter)"
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -69,9 +74,9 @@ export default function Footer() {
         </div>
 
         {/* Bottom section with divider */}
-        <div className="mt-8 pt-6 border-t border-white/20">
+        <div className="mt-8 pt-6 ">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-            <div className="flex gap-6 text-sm">
+            <div className="flex gap-6 text-lg">
               <a href="#" className="hover:text-white/80 transition-colors">
                 Terms & Conditions
               </a>
@@ -80,7 +85,8 @@ export default function Footer() {
                 Privacy Policy
               </a>
             </div>
-            <div className="text-sm">© 2025 Neelam Print'o'Pack. All rights reserved.</div>
+            <div className="w-[35vw] border-2 border-t border-white/50"></div>
+            <div className="text-lg">© 2025 Neelam Print'o'Pack. All rights reserved.</div>
           </div>
         </div>
       </div>
