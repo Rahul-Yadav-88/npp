@@ -7,6 +7,7 @@ import Home from './app/Home/Home'
 import About from './app/About/About'
 import ProductPage from './app/ProductPage/ProductPage'
 import Contact from './app/Contact/contact'
+import CoreKey from './app/Core value/CoreKey'
 
 
 
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />
+      },
+      {
+        path: "/values",
+        element: <CoreKey />
       },
 
 
