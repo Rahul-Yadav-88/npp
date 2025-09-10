@@ -30,20 +30,21 @@ export default function CoreValuesPage() {
           ].map((item, idx) => (
             <div
               key={idx}
-              className="rounded-lg h-60 flex flex-col items-center justify-center p-8 text-center shadow-sm border transition-all duration-300 hover:border-black"
+              className="rounded-lg h-60 flex flex-col items-center justify-center p-8 text-center shadow-sm border transition-all duration-300"
               style={{ boxShadow: "inset 0 0 0 0 transparent" }}
               onMouseEnter={(e) =>
                 (e.currentTarget.style.boxShadow =
                   "inset 0 0 20px rgba(0,0,0,0.6)")
               }
               onMouseLeave={(e) =>
-                (e.currentTarget.style.boxShadow = "inset 0 0 0 0 transparent")
+                (e.currentTarget.style.boxShadow =
+                  "inset 0 0 0 0 transparent")
               }
             >
               <img
                 src={item.img}
                 alt={item.title}
-                className="w-16 h-16 object-contain mx-auto mb-4"
+                className="w-16 h-16 object-contain mx-auto mb-4 transition-transform duration-300"
               />
               <h3 className="font-bold text-lg mb-2">{item.title}</h3>
               <p className="text-sm text-gray-600">{item.desc}</p>
@@ -53,12 +54,12 @@ export default function CoreValuesPage() {
       </section>
 
       {/* Beliefs & Key Values */}
-      <section className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
         
         {/* Beliefs */}
-        <div>
+        <div className="flex flex-col">
           <h2 className="text-lg font-bold text-center mb-6">Beliefs</h2>
-          <div className="bg-gray-50 rounded-lg p-6 shadow-sm min-h-[200px] flex items-center">
+          <div className="bg-gray-50 rounded-lg p-6 shadow-sm flex-1 flex items-center">
             <ul className="space-y-3 text-sm text-gray-700">
               <li className="flex items-start">
                 <span className="text-red-500 mr-2"><strong>O</strong></span>
@@ -81,14 +82,26 @@ export default function CoreValuesPage() {
         </div>
 
         {/* Key Values */}
-        <div>
+        <div className="flex flex-col">
           <h2 className="text-lg font-bold text-center mb-6">Key Values</h2>
-          <div className="bg-gray-50 rounded-lg p-6 border shadow-sm min-h-[200px] flex items-center">
-            <div className="grid grid-cols-2 divide-x divide-y text-sm text-gray-700 text-center border w-full">
-              <div className="p-3"><span><strong>Desire for excellence</strong></span></div>
-              <div className="p-3"><span><strong>Innovation and teamwork</strong></span></div>
-              <div className="p-3"><span><strong>Trust and faith build-up</strong></span></div>
-              <div className="p-3"><span><strong>Transparency with customers</strong></span></div>
+          <div className="bg-gray-50 rounded-lg p-6 shadow-sm flex-1 flex items-center justify-center">
+            <div className="grid grid-cols-2 divide-x divide-y w-full text-center">
+              <div className="flex flex-col items-center justify-center p-6 space-y-2">
+                <img src="Desier.png" alt="Excellence" className="w-8 h-8 mb-2" />
+                <span className="font-semibold text-gray-800">Desire for excellence</span>
+              </div>
+              <div className="flex flex-col items-center justify-center p-6 space-y-2">
+                <img src="teamwork.png" alt="Teamwork" className="w-8 h-8 mb-2" />
+                <span className="font-semibold text-gray-800">Innovation and teamwork</span>
+              </div>
+              <div className="flex flex-col items-center justify-center p-6 space-y-2">
+                <img src="build.png" alt="Trust" className="w-8 h-8 mb-2" />
+                <span className="font-semibold text-gray-800">Trust and faith build-up</span>
+              </div>
+              <div className="flex flex-col items-center justify-center p-6 space-y-2">
+                <img src="customer.png" alt="Transparency" className="w-8 h-8 mb-2" />
+                <span className="font-semibold text-gray-800">Transparency with customers</span>
+              </div>
             </div>
           </div>
         </div>
@@ -100,7 +113,7 @@ export default function CoreValuesPage() {
         {/* Mission */}
         <div>
           <h2 className="text-lg font-bold text-center mb-6">Mission</h2>
-          <div className="bg-gray-50 rounded-lg p-6 border shadow-sm text-center min-h-[160px] flex items-center">
+          <div className="bg-gray-50 rounded-lg p-6 shadow-sm text-center min-h-[160px] flex items-center">
             <p className="text-sm text-gray-600 leading-relaxed">
               Our mission is to set new standards of quality and perfection by
               combining innovation, transparency, and reliability, ensuring every
@@ -112,7 +125,7 @@ export default function CoreValuesPage() {
         {/* Vision */}
         <div>
           <h2 className="text-lg font-bold text-center mb-6">Vision</h2>
-          <div className="bg-gray-50 rounded-lg p-6 border shadow-sm text-center min-h-[160px] flex items-center">
+          <div className="bg-gray-50 rounded-lg p-6 shadow-sm text-center min-h-[160px] flex items-center">
             <p className="text-sm text-gray-600 leading-relaxed">
               Our vision is to be a globally trusted leader in plastic packaging,
               known for uncompromising quality, efficiency, and customer
