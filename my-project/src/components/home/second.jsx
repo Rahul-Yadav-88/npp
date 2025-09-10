@@ -1,4 +1,10 @@
+import { useNavigate } from 'react-router-dom';
+
 export default function HomePage() {
+   const navigate = useNavigate();
+  const handleClick = () => {
+    navigate('/contact');  // Navigates to contact page
+  };
   return (
     <div className=" bg-white relative">
       {/* Main content */}
@@ -45,6 +51,8 @@ export default function HomePage() {
             variant="outline"
             size="lg"
             className="border-2 border-gray-400 text-gray-700 hover:bg-gray-50 px-8 py-3 text-lg bg-transparent"
+                          onClick={handleClick}
+
           >
             Know about us
           </button>
