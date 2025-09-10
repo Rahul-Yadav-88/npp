@@ -4,12 +4,7 @@ export default function Home() {
     <div className="min-h-screen bg-white ">
       {/* Header Section */}
       <header className="bg-[#2592ad] px-16 py-16 relative overflow-hidden">
-        {/* WhatsApp Button */}
-        {/* <div className="absolute top-4 right-4">
-          <button className="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg transition-colors">
-            <MessageCircle className="w-6 h-6" />
-          </button>
-        </div> */}
+       
 
         <div className=" mx-auto flex items-center justify-center gap-10 ">
           {/* Left side - Illustrations */}
