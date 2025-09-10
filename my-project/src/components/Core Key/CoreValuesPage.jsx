@@ -85,10 +85,10 @@ export default function CoreValuesPage() {
           <h2 className="text-lg font-bold text-center mb-6">Key Values</h2>
           <div className="bg-gray-50 rounded-lg p-6 border shadow-sm min-h-[200px] flex items-center">
             <div className="grid grid-cols-2 divide-x divide-y text-sm text-gray-700 text-center border w-full">
-              <div className="p-3">Desire for excellence</div>
-              <div className="p-3">Innovation and teamwork</div>
-              <div className="p-3">Trust and faith build-up</div>
-              <div className="p-3">Transparency with customers</div>
+              <div className="p-3"><span><strong>Desire for excellence</strong></span></div>
+              <div className="p-3"><span><strong>Innovation and teamwork</strong></span></div>
+              <div className="p-3"><span><strong>Trust and faith build-up</strong></span></div>
+              <div className="p-3"><span><strong>Transparency with customers</strong></span></div>
             </div>
           </div>
         </div>

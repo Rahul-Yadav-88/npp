@@ -8,6 +8,7 @@ import About from './app/About/About'
 import ProductPage from './app/ProductPage/ProductPage'
 import Contact from './app/Contact/contact'
 import CoreKey from './app/Core value/CoreKey'
+import Quality from './app/QualityAssurance/Quality'
 
 
 
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "/products/:id",
         element: <ProductPage />
+      },
+       {
+        path: "/quality",
+        element: <Quality />
       },
       {
         path: "/contact",
