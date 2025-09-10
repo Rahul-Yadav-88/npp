@@ -26,7 +26,7 @@ function Moderate() {
   return (
     <div className='min-h-screen w-full '>
       {/* Header */}
-      <div className='h-[40vh] w-[70%] m-auto mt-7'>
+      <div className='h-[32vh] w-[70%] m-auto mt-7'>
         <h1 className='text-center font-sans font-bold text-2xl md:text-4xl'>
           <span className='text-[#2592AD]'>NEELAM</span> Print'<span className='text-red-500'>o</span>' Pack
         </h1>
@@ -42,35 +42,35 @@ function Moderate() {
           {/* Circle Buttons */}
           <button
             onClick={() => setCurrentIndex(0)}
-            className={`h-[50px] w-[50px] absolute top-[90%] left-[-3%] border-2 rounded-full leading-[2.1rem]
+            className={`h-[50px] w-[50px] absolute top-[95%] left-[-3%] border-2 rounded-full leading-[2.1rem]
               px-4 py-2 transition transform duration-300
               ${currentIndex === 0 ? 'bg-[#2592AD] text-white border-[#2592AD]' : 'bg-white text-black border-black hover:bg-blue-500 hover:text-white hover:border-0 hover:scale-110'}`}
           >1</button>
 
           <button
             onClick={() => setCurrentIndex(1)}
-            className={`h-[50px] w-[50px] absolute top-[27%] lg:left-[10%] md:left-[6%] border-2 rounded-full leading-[2.1rem]
+            className={`h-[50px] w-[50px] absolute md:top-[30%] top-[27%] 2xl:left-[8%] xl:left-[8%] lg:left-[5%] md:left-[-1%] border-2 rounded-full leading-[2.1rem]
               px-4 py-2 transition transform duration-300
               ${currentIndex === 1 ? 'bg-[#2592AD] text-white border-[#2592AD]' : 'bg-white text-black border-black hover:bg-blue-500 hover:text-white hover:border-0 hover:scale-110'}`}
           >2</button>
 
           <button
             onClick={() => setCurrentIndex(2)}
-            className={`h-[50px] w-[50px] absolute top-[-7%] left-[47.5%] border-2 rounded-full leading-[2.1rem]
+            className={`h-[50px] w-[50px] absolute lg:top-[-7%]  xl:top-[-4%] md:top-[-3%]  left-[47.5%] border-2 rounded-full leading-[2.1rem]
               px-4 py-2 transition transform duration-300
               ${currentIndex === 2 ? 'bg-[#2592AD] text-white border-[#2592AD]' : 'bg-white text-black border-black hover:bg-blue-500 hover:text-white hover:border-0 hover:scale-110'}`}
           >3</button>
 
           <button
             onClick={() => setCurrentIndex(3)}
-            className={`h-[50px] w-[50px] absolute top-[27%] lg:right-[10%] md:right-[5%] border-2 rounded-full leading-[2.1rem]
+            className={`h-[50px] w-[50px] absolute md:top-[30%] top-[27%] 2xl:right-[8%] xl:right-[8%] lg:right-[5%] md:right-[-1%] border-2 rounded-full leading-[2.1rem]
               px-4 py-2 transition transform duration-300
               ${currentIndex === 3 ? 'bg-[#2592AD] text-white border-[#2592AD]' : 'bg-white text-black border-black hover:bg-blue-500 hover:text-white hover:border-0 hover:scale-110'}`}
           >4</button>
 
           <button
             onClick={() => setCurrentIndex(4)}
-            className={`h-[50px] w-[50px] absolute top-[90%] right-[-3%] border-2 rounded-full leading-[2.1rem]
+            className={`h-[50px] w-[50px] absolute top-[95%] right-[-3%] border-2 rounded-full leading-[2.1rem]
               px-4 py-2 transition transform duration-300
               ${currentIndex === 4 ? 'bg-[#2592AD] text-white border-[#2592AD]' : 'bg-white text-black border-black hover:bg-blue-500 hover:text-white hover:border-0 hover:scale-110'}`}
           >5</button>

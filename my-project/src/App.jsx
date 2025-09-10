@@ -1,6 +1,3 @@
-
-
-
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './Layout'
 import Home from './app/Home/Home'
@@ -28,6 +25,7 @@ const router = createBrowserRouter([
         path: "/about",
         element: <About />
       },
+      
       {
         path: "/products/:id",
         element: <ProductPage />
