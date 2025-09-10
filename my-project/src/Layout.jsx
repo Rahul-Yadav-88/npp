@@ -15,7 +15,7 @@ const Layout = () => {
      
      
 
-   <div className="mt-10">
+   <div className="">
        <Footer />
    </div>
     </div>

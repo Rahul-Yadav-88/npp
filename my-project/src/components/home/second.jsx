@@ -2,7 +2,7 @@ export default function HomePage() {
   return (
     <div className=" bg-white relative">
       {/* Main content */}
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 pt-16">
+      <div className="relative z-10 flex flex-col items-center justify-center  px-4 pt-16">
         <div className="max-w-4xl mx-auto text-center">
           {/* Header */}
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-8">About Company</h1>
