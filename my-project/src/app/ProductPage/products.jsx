@@ -1,17 +1,173 @@
 const products =[
       {
-    id: 1,
+  //   id: 1,
+  //   name: "Pharma Dry syrup Bottles",
+  //   rating: 4.8,
+  //   reviews: 49,
+  //   description: "Durable and hygienic bottles specially designed for safe storage of dry syrups. Ensures moisture protection, tamper-resistance, and accurate pouring to maintain medicine stability and shelf life.",
+  //       images : [
+  //   { src: "/product1.png", alt: "Syrup bottle and box mockup" },
+  //   { src: "/product3.png", alt: "Brown glass bottle" },
+  //   { src: "/product6.png", alt: "White medicine bottle" },
+  //   { src: "/product4.png", alt: "Label close-up" },
+  //   { src: "/product5.png", alt: "Packaging box" },
+  // ],
+  //   specs: [
+  //     { label: "Color", value: "White" },
+  //     { label: "Usage", value: "Laboratory" },
+  //     { label: "Size", value: "Standard" },
+  //     { label: "Product Type", value: "Adaptors Bottles" },
+  //     { label: "Material", value: "PTFE" },
+  //     { label: "Application", value: "Industrial" },
+  //     { label: "Supply Ability", value: "1000 Per Day" },
+  //     { label: "Delivery Time", value: "4-5 Days" },
+  //   ],
+  //   sizes: [
+  //     "5 ml", "10 ml", "20 ml", "30 ml", "40 ml",
+  //     "50 ml", "60 ml", "70 ml", "80 ml",
+  //     "8 ml", "15 ml", "25 ml", "35 ml", "45 ml",
+  //     "55 ml", "65 ml", "75 ml", "85 ml",
+  //   ],
+  //  },
+  //    {
+  //   id: 2,
+  //   name: "Measuring Spoons",
+  //   rating: 4.8,
+  //   reviews: 49,
+  //   description: "Precision-engineered spoons designed for consistent dosing of powders and liquids. Lightweight, reusable, and available in multiple sizes to suit varied medical applications.",
+  //       images : [
+  //   { src: "/spoon.png", alt: "Syrup bottle and box mockup" },
+  //   { src: "/spoon2.png", alt: "Brown glass bottle" },
+  //   { src: "/spoon3.png", alt: "White medicine bottle" },
+  //   { src: "/spoon4.png", alt: "Label close-up" },
+  //   { src: "/spoon5.png", alt: "Packaging box" },
+  // ],
+  //   specs: [
+  //     { label: "Color", value: "White" },
+  //     { label: "Usage", value: "Laboratory" },
+  //     { label: "Size", value: "Standard" },
+  //     { label: "Product Type", value: "Adaptors Bottles" },
+  //     { label: "Material", value: "PTFE" },
+  //     { label: "Application", value: "Industrial" },
+  //     { label: "Supply Ability", value: "1000 Per Day" },
+  //     { label: "Delivery Time", value: "4-5 Days" },
+  //   ],
+  //   sizes: [
+  //     "5 ml", "10 ml", "20 ml", "30 ml", "40 ml",
+  //     "50 ml", "60 ml", "70 ml", "80 ml",
+  //     "8 ml", "15 ml", "25 ml", "35 ml", "45 ml",
+  //     "55 ml", "65 ml", "75 ml", "85 ml",
+  //   ],
+
+  id: 1,
     name: "Pharma Dry syrup Bottles",
     rating: 4.8,
     reviews: 49,
     description: "Durable and hygienic bottles specially designed for safe storage of dry syrups. Ensures moisture protection, tamper-resistance, and accurate pouring to maintain medicine stability and shelf life.",
-        images : [
-    { src: "/product1.png", alt: "Syrup bottle and box mockup" },
-    { src: "/product3.png", alt: "Brown glass bottle" },
-    { src: "/product6.png", alt: "White medicine bottle" },
-    { src: "/product4.png", alt: "Label close-up" },
-    { src: "/product5.png", alt: "Packaging box" },
-  ],
+    
+    // Default images
+    images: [
+      { src: "/medicine_img/i1.jpg", alt: "Syrup bottle and box mockup" },
+      { src: "/medicine_img/i2.jpg", alt: "Brown glass bottle" },
+      { src: "/medicine_img/i3.jpg", alt: "White medicine bottle" },
+      { src: "/medicine_img/i4.jpg", alt: "Label close-up" },
+      { src: "/medicine_img/i5.jpg", alt: "Packaging box" },
+    ],
+    
+    // Size-specific images in increasing order
+    sizeImages: {
+      "5 ml": [
+        { src: "/medicine_img/i1.jpg", alt: "5ml Syrup bottle" },
+        { src: "/medicine_img/i2.jpg", alt: "5ml Brown glass bottle" },
+        { src: "/medicine_img/i3.jpg", alt: "5ml White medicine bottle" },
+      ],
+      "8 ml": [
+        { src: "/medicine_img/i4.jpg", alt: "8ml Label close-up" },
+        { src: "/medicine_img/i5.jpg", alt: "8ml Packaging box" },
+        { src: "/medicine_img/i6.jpg", alt: "8ml Medicine bottle" },
+      ],
+      "10 ml": [
+        { src: "/medicine_img/i7.jpg", alt: "10ml Syrup bottle" },
+        { src: "/medicine_img/i8.jpg", alt: "10ml Brown glass bottle" },
+        { src: "/medicine_img/i9.jpg", alt: "10ml White medicine bottle" },
+      ],
+      "15 ml": [
+        { src: "/medicine_img/i10.jpg", alt: "15ml Label close-up" },
+        { src: "/medicine_img/i11.jpg", alt: "15ml Packaging box" },
+        { src: "/medicine_img/i12.jpg", alt: "15ml Medicine bottle" },
+      ],
+      "20 ml": [
+        { src: "/medicine_img/i13.jpg", alt: "20ml Syrup bottle" },
+        { src: "/medicine_img/i14.jpg", alt: "20ml Brown glass bottle" },
+        { src: "/medicine_img/i15.jpg", alt: "20ml White medicine bottle" },
+      ],
+      "25 ml": [
+        { src: "/medicine_img/i16.jpg", alt: "25ml Label close-up" },
+        { src: "/medicine_img/i1.jpg", alt: "25ml Packaging box" },
+        { src: "/medicine_img/i2.jpg", alt: "25ml Medicine bottle" },
+      ],
+      "30 ml": [
+        { src: "/medicine_img/i3.jpg", alt: "30ml Syrup bottle" },
+        { src: "/medicine_img/i4.jpg", alt: "30ml Brown glass bottle" },
+        { src: "/medicine_img/i5.jpg", alt: "30ml White medicine bottle" },
+      ],
+      "35 ml": [
+        { src: "/medicine_img/i6.jpg", alt: "35ml Label close-up" },
+        { src: "/medicine_img/i7.jpg", alt: "35ml Packaging box" },
+        { src: "/medicine_img/i8.jpg", alt: "35ml Medicine bottle" },
+      ],
+      "40 ml": [
+        { src: "/medicine_img/i9.jpg", alt: "40ml Syrup bottle" },
+        { src: "/medicine_img/i10.jpg", alt: "40ml Brown glass bottle" },
+        { src: "/medicine_img/i11.jpg", alt: "40ml White medicine bottle" },
+      ],
+      "45 ml": [
+        { src: "/medicine_img/i12.jpg", alt: "45ml Label close-up" },
+        { src: "/medicine_img/i13.jpg", alt: "45ml Packaging box" },
+        { src: "/medicine_img/i14.jpg", alt: "45ml Medicine bottle" },
+      ],
+      "50 ml": [
+        { src: "/medicine_img/i15.jpg", alt: "50ml Syrup bottle" },
+        { src: "/medicine_img/i16.jpg", alt: "50ml Brown glass bottle" },
+        { src: "/medicine_img/i1.jpg", alt: "50ml White medicine bottle" },
+      ],
+      "55 ml": [
+        { src: "/medicine_img/i2.jpg", alt: "55ml Label close-up" },
+        { src: "/medicine_img/i3.jpg", alt: "55ml Packaging box" },
+        { src: "/medicine_img/i4.jpg", alt: "55ml Medicine bottle" },
+      ],
+      "60 ml": [
+        { src: "/medicine_img/i5.jpg", alt: "60ml Syrup bottle" },
+        { src: "/medicine_img/i6.jpg", alt: "60ml Brown glass bottle" },
+        { src: "/medicine_img/i7.jpg", alt: "60ml White medicine bottle" },
+      ],
+      "65 ml": [
+        { src: "/medicine_img/i8.jpg", alt: "65ml Label close-up" },
+        { src: "/medicine_img/i9.jpg", alt: "65ml Packaging box" },
+        { src: "/medicine_img/i10.jpg", alt: "65ml Medicine bottle" },
+      ],
+      "70 ml": [
+        { src: "/medicine_img/i11.jpg", alt: "70ml Syrup bottle" },
+        { src: "/medicine_img/i12.jpg", alt: "70ml Brown glass bottle" },
+        { src: "/medicine_img/i13.jpg", alt: "70ml White medicine bottle" },
+      ],
+      "75 ml": [
+        { src: "/medicine_img/i14.jpg", alt: "75ml Label close-up" },
+        { src: "/medicine_img/i15.jpg", alt: "75ml Packaging box" },
+        { src: "/medicine_img/i16.jpg", alt: "75ml Medicine bottle" },
+      ],
+      "80 ml": [
+        { src: "/medicine_img/i1.jpg", alt: "80ml Syrup bottle" },
+        { src: "/medicine_img/i2.jpg", alt: "80ml Brown glass bottle" },
+        { src: "/medicine_img/i3.jpg", alt: "80ml White medicine bottle" },
+      ],
+      "85 ml": [
+        { src: "/medicine_img/i4.jpg", alt: "85ml Label close-up" },
+        { src: "/medicine_img/i5.jpg", alt: "85ml Packaging box" },
+        { src: "/medicine_img/i6.jpg", alt: "85ml Medicine bottle" },
+      ],
+    },
+    
     specs: [
       { label: "Color", value: "White" },
       { label: "Usage", value: "Laboratory" },
@@ -23,41 +179,12 @@ const products =[
       { label: "Delivery Time", value: "4-5 Days" },
     ],
     sizes: [
-      "5 ml", "10 ml", "20 ml", "30 ml", "40 ml",
-      "50 ml", "60 ml", "70 ml", "80 ml",
-      "8 ml", "15 ml", "25 ml", "35 ml", "45 ml",
-      "55 ml", "65 ml", "75 ml", "85 ml",
+      "5 ml", "8 ml", "10 ml", "15 ml", "20 ml",
+      "25 ml", "30 ml", "35 ml", "40 ml", "45 ml",
+      "50 ml", "55 ml", "60 ml", "65 ml", "70 ml",
+      "75 ml", "80 ml", "85 ml"
     ],
-   },
-     {
-    id: 2,
-    name: "Measuring Spoons",
-    rating: 4.8,
-    reviews: 49,
-    description: "Precision-engineered spoons designed for consistent dosing of powders and liquids. Lightweight, reusable, and available in multiple sizes to suit varied medical applications.",
-        images : [
-    { src: "/spoon.png", alt: "Syrup bottle and box mockup" },
-    { src: "/spoon2.png", alt: "Brown glass bottle" },
-    { src: "/spoon3.png", alt: "White medicine bottle" },
-    { src: "/spoon4.png", alt: "Label close-up" },
-    { src: "/spoon5.png", alt: "Packaging box" },
-  ],
-    specs: [
-      { label: "Color", value: "White" },
-      { label: "Usage", value: "Laboratory" },
-      { label: "Size", value: "Standard" },
-      { label: "Product Type", value: "Adaptors Bottles" },
-      { label: "Material", value: "PTFE" },
-      { label: "Application", value: "Industrial" },
-      { label: "Supply Ability", value: "1000 Per Day" },
-      { label: "Delivery Time", value: "4-5 Days" },
-    ],
-    sizes: [
-      "5 ml", "10 ml", "20 ml", "30 ml", "40 ml",
-      "50 ml", "60 ml", "70 ml", "80 ml",
-      "8 ml", "15 ml", "25 ml", "35 ml", "45 ml",
-      "55 ml", "65 ml", "75 ml", "85 ml",
-    ],
+   
    },
      {
     id: 3,
