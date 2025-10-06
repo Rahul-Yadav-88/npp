@@ -28,7 +28,7 @@ export default function ProductGallery({ product, selectedSize }) {
       </div>
 
       {/* Main image */}
-      <div className="w-full flex justify-center items-center overflow-hidden rounded-md border bg-white h-64 sm:h-80 md:h-96 lg:h-[380px]">
+      <div className="w-full flex justify-center items-center overflow-hidden rounded-md border bg-white h-64 sm:h-80 md:h-96 lg:h-[320px]">
         {main ? (
           <img
             src={main.src}
