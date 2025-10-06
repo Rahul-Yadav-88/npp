@@ -6,22 +6,22 @@ export default function Home() {
       <header className="bg-[#2592ad] px-16 py-16 relative overflow-hidden">
        
 
-        <div className=" mx-auto flex items-center justify-center gap-10 ">
-          {/* Left side - Illustrations */}
-         <div>
-          <img src="/about.png" alt="" className="w-[634px] h-96" />
-         </div>
+        <div className="mx-auto flex flex-col-reverse lg:flex-row items-center justify-center gap-10">
+  {/* Left side - Illustrations */}
+  <div className="w-full lg:w-auto">
+    <img src="/about.png" alt="" className="w-full max-w-md mx-auto h-auto" />
+  </div>
 
-          {/* Right side - Text content */}
-          <div className="flex-1 text-white"> 
-            
-            <h2 className="text-4xl font-bold text-center leading-tight">
-              Your Partner in Precision
-              <br />
-              Plastic Packaging
-            </h2>
-          </div>
-        </div>
+  {/* Right side - Text content */}
+  <div className="text-white text-center px-4 lg:px-0">
+    <h2 className="text-3xl sm:text-4xl font-bold leading-tight">
+      Your Partner in Precision
+      <br />
+      Plastic Packaging
+    </h2>
+  </div>
+</div>
+
       </header>
 
       {/* Main Content */}

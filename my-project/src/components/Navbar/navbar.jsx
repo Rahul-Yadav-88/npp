@@ -12,6 +12,17 @@ const Navbar = () => {
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
   const toggleMobileDropdown = () => setIsMobileDropdownOpen(!isMobileDropdownOpen);
 
+  // ✅ Close mobile menu function
+  const closeMobileMenu = () => {
+    setIsMenuOpen(false);
+    setIsMobileDropdownOpen(false);
+  };
+
+  // ✅ Close desktop dropdown function
+  const closeDesktopDropdown = () => {
+    setIsDropdownOpen(false);
+  };
+
   // ✅ Desktop-only outside click handler
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -50,28 +61,37 @@ const Navbar = () => {
           
           {/* Left Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <Link to="/" className="text-gray-700 font-medium transition-colors duration-200">Home</Link>
-            <Link to="/about" className="text-gray-700 font-medium transition-colors duration-200">About Us</Link>
+            <Link to="/" className="text-gray-700 font-medium transition-colors duration-200 hover:text-[#2592AD]">
+              Home
+            </Link>
+            <Link to="/about" className="text-gray-700 font-medium transition-colors duration-200 hover:text-[#2592AD]">
+              About Us
+            </Link>
 
             {/* Desktop Dropdown */}
             <div className="relative" ref={dropdownRef}>
               <button
                 onClick={toggleDropdown}
-                className="flex items-center text-gray-700 font-medium transition-colors duration-200"
+                className="flex items-center text-gray-700 font-medium transition-colors duration-200 hover:text-[#2592AD]"
               >
                 Comprehensive Product Range
-                <ChevronDown className="ml-1 h-4 w-4" />
+                <ChevronDown className={`ml-1 h-4 w-4 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} />
               </button>
 
               {isDropdownOpen && (
-                <div className="absolute mt-2 w-135 right-0 bg-white border border-gray-200 rounded-md shadow-lg z-50 max-h-96 overflow-y-auto">
+                <div className="absolute mt-2 w-80 right-0 bg-white border border-gray-200 rounded-md shadow-lg z-50 max-h-96 overflow-y-auto">
                   {categories.map((cat, index) =>
                     cat.disabled ? (
-                      <div key={index} className="px-4 py-2 text-gray-600 cursor-not-allowed text-sm font-semibold">
+                      <div key={index} className="px-4 py-2 text-gray-400 cursor-not-allowed text-sm font-semibold">
                         {cat.name}
                       </div>
                     ) : (
-                      <Link key={index} to={cat.path} className="block px-4 py-2 text-gray-700 hover:bg-gray-100 text-sm font-semibold">
+                      <Link 
+                        key={index} 
+                        to={cat.path} 
+                        className="block px-4 py-2 text-gray-700 hover:bg-gray-100 text-sm font-semibold transition-colors duration-200"
+                        onClick={closeDesktopDropdown}
+                      >
                         {cat.name}
                       </Link>
                     )
@@ -83,16 +103,20 @@ const Navbar = () => {
 
           {/* Center Logo */}
           <div className="flex-shrink-0">
-            <Link to="/">
+            <Link to="/" onClick={closeMobileMenu}>
               <img src='/logo.png' alt="Company Logo" className="w-40 object-contain" />
             </Link>
           </div>
 
           {/* Right Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <Link to="/quality" className="text-gray-700 font-medium transition-colors duration-200">Quality Assurance</Link>
-            <Link to="/values" className="text-gray-700 font-medium transition-colors duration-200">Care/Key/Our Belief Values</Link>
-            <Link to="/contact" className="bg-[#2592AD] text-white px-6 py-2 rounded-sm font-medium transition-colors duration-200 inline-block">
+            <Link to="/quality" className="text-gray-700 font-medium transition-colors duration-200 hover:text-[#2592AD]">
+              Quality Assurance
+            </Link>
+            <Link to="/values" className="text-gray-700 font-medium transition-colors duration-200 hover:text-[#2592AD]">
+              Care/Key/Our Belief Values
+            </Link>
+            <Link to="/contact" className="bg-[#2592AD] text-white px-6 py-2 rounded-sm font-medium transition-all duration-200 hover:bg-[#1f7a91] inline-block">
               Contact Us
             </Link>
           </div>
@@ -109,8 +133,20 @@ const Navbar = () => {
         {isMenuOpen && (
           <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
-              <Link to="/" className="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium">Home</Link>
-              <Link to="/about" className="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium">About Us</Link>
+              <Link 
+                to="/" 
+                className="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium"
+                onClick={closeMobileMenu}
+              >
+                Home
+              </Link>
+              <Link 
+                to="/about" 
+                className="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium"
+                onClick={closeMobileMenu}
+              >
+                About Us
+              </Link>
 
               {/* Mobile Dropdown */}
               <div>
@@ -119,7 +155,7 @@ const Navbar = () => {
                   className="w-full flex justify-between items-center px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium"
                 >
                   Comprehensive Product Range
-                  <ChevronDown className="h-4 w-4" />
+                  <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isMobileDropdownOpen ? 'rotate-180' : ''}`} />
                 </button>
 
                 {isMobileDropdownOpen && (
@@ -134,10 +170,7 @@ const Navbar = () => {
                           key={index}
                           to={cat.path}
                           className="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md text-sm"
-                          onClick={() => {
-                            setIsMenuOpen(false);
-                            setIsMobileDropdownOpen(false);
-                          }}
+                          onClick={closeMobileMenu}
                         >
                           {cat.name}
                         </Link>
@@ -147,10 +180,26 @@ const Navbar = () => {
                 )}
               </div>
 
-              <Link to="/quality" className="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium">Quality Assurance</Link>
-              <Link to="/values" className="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium">Care/Key/Our Belief Values</Link>
+              <Link 
+                to="/quality" 
+                className="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium"
+                onClick={closeMobileMenu}
+              >
+                Quality Assurance
+              </Link>
+              <Link 
+                to="/values" 
+                className="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium"
+                onClick={closeMobileMenu}
+              >
+                Care/Key/Our Belief Values
+              </Link>
               <div className="px-3 py-2">
-                <Link to="/contact" className="bg-[#2592AD] text-white px-6 py-2 rounded-sm font-medium transition-colors duration-200 inline-block">
+                <Link 
+                  to="/contact" 
+                  className="bg-[#2592AD] text-white px-6 py-2 rounded-sm font-medium transition-colors duration-200 inline-block hover:bg-[#1f7a91]"
+                  onClick={closeMobileMenu}
+                >
                   Contact Us
                 </Link>
               </div>
