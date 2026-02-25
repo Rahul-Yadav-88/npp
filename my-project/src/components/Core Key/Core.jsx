@@ -3,7 +3,7 @@ export default function Core() {
     <section
       className="relative bg-cover bg-center bg-no-repeat text-white h-[300px] md:h-[400px] lg:h-[450px]"
       style={{
-        backgroundImage: "url('core.png')", // apni image ka path daal
+        backgroundImage: "url('core.png')",
       }}
     >
       {/* Text Content - Top Positioned */}

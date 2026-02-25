@@ -8,21 +8,25 @@ export default function CoreValuesPage() {
       title: "Excellence",
       desc: "Striving for the highest standards.",
       img: "Excellence.png",
+      color: "bg-[#f8c52d]",
     },
     {
       title: "Trust & Reliability",
       desc: "Building confidence with every delivery.",
       img: "trust.png",
+      color: "bg-[#f49ea1]",
     },
     {
       title: "Mutual Growth",
       desc: "Growing with our customers and partners.",
       img: "growth.png",
+      color: "bg-[#41c5f3]",
     },
     {
       title: "Creativity & Innovation",
       desc: "Driving improvement through fresh ideas.",
       img: "innovation.png",
+      color: "bg-[#98c688]",
     },
   ];
 
@@ -65,19 +69,19 @@ export default function CoreValuesPage() {
                 // whileHover={{ y: -3 }}
                 className="group"
               >
-                <div className="bg-white rounded-2xl p-8 h-full shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100">
-                  <div className="flex flex-col items-center text-center space-y-4">
+                <div className={`${item.color} rounded-2xl p-8 h-full shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100`}>
+                  <div className="flex flex-col items-center  text-center space-y-4">
                     <div className="">
                       <img
                         src={item.img}
                         alt={item.title}
-                        className="w-12 h-12 object-contain transition-transform duration-200 group-hover:scale-110"
+                        className="w-12 h-12 object-contain transition-transform duration-200 rounded-2xl group-hover:scale-110"
                       />
                     </div>
                     <h3 className="font-semibold text-xl text-gray-800 tracking-wide">
                       {item.title}
                     </h3>
-                    <p className="text-sm text-gray-600 leading-relaxed font-light">
+                    <p className="text-sm text-gray-600 leading-relaxed font-medium">
                       {item.desc}
                     </p>
                   </div>
@@ -96,14 +100,14 @@ export default function CoreValuesPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="text-center mb-10">
+            <div className="text-center mb-10 ">
               <h2 className="text-3xl md:text-4xl font-light text-gray-800 mb-3 tracking-wide">
                 Beliefs
               </h2>
               <div className="w-16 h-0.5 bg-[#3799B0] mx-auto"></div>
             </div>
-            <div className="bg-white rounded-2xl p-10 shadow-xl border border-gray-100">
-              <ul className="space-y-6">
+            <div className="bg-[#f8c52d] rounded-2xl p-10  shadow-xl border border-gray-100">
+              <ul className="space-y-6 ">
                 {beliefs.map((belief, idx) => (
                   <motion.li
                     key={idx}
@@ -113,8 +117,8 @@ export default function CoreValuesPage() {
                     transition={{ duration: 0.5, delay: idx * 0.1 }}
                     className="flex items-start group"
                   >
-                    <span className="w-2 h-2 rounded-full bg-[#3799B0] mt-2 mr-4 flex-shrink-0 group-hover:scale-150 transition-transform duration-300"></span>
-                    <span className="text-gray-700 leading-relaxed font-light">
+                    <span className="w-2  h-2 rounded-full bg-[#3799B0] mt-2 mr-4 flex-shrink-0 group-hover:scale-150 transition-transform duration-300"></span>
+                    <span className="text-gray-700 font-medium leading-relaxed ">
                       {belief}
                     </span>
                   </motion.li>
@@ -136,7 +140,7 @@ export default function CoreValuesPage() {
               </h2>
               <div className="w-16 h-0.5 bg-[#3799B0] mx-auto mb-10"></div>
             </div>
-            <div className="bg-white rounded-2xl p-3 shadow-xl border border-gray-100 ">
+            <div className="bg-[#f49ea1] rounded-2xl p-3 shadow-xl border border-gray-100 ">
               <div className="grid grid-cols-2 gap-4">
                 {keyValues.map((kv, idx) => (
                   <motion.div
@@ -148,7 +152,7 @@ export default function CoreValuesPage() {
                     whileHover={{ scale: 1.05 }}
                     className="flex flex-col items-center text-center space-y-4 p-4 rounded-xl hover:bg-gray-50 transition-all duration-300"
                   >
-                    <div className="">
+                    <div className="rounded-full bg-white p-2">
                       <img
                         src={kv.img}
                         alt={kv.title}
@@ -182,8 +186,8 @@ export default function CoreValuesPage() {
                 </h2>
                 <div className="w-16 h-0.5 bg-[#3799B0] mx-auto mt-3"></div>
               </div>
-              <div className="bg-white rounded-2xl p-10 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 flex items-center mt-10 h-[300px]">
-                <p className="text-base text-gray-700 leading-loose font-light text-center">
+              <div className="bg-[#41c5f3] rounded-2xl p-10 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 flex items-center mt-10 h-[300px]">
+                <p className="text-base text-gray-700 leading-loose font-semibold text-center">
                   Our mission is to set new standards of quality and perfection by
                   combining innovation, transparency, and reliability, ensuring
                   every package adds value and builds customer trust.
@@ -205,8 +209,8 @@ export default function CoreValuesPage() {
                 </h2>
                 <div className="w-16 h-0.5 bg-[#3799B0] mx-auto"></div>
               </div>
-              <div className="bg-white rounded-2xl p-10 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500  flex items-center mt-10 h-[300px]">
-                <p className="text-base text-gray-700 leading-loose font-light text-center">
+              <div className="bg-[#98c688] rounded-2xl p-10 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500  flex items-center mt-10 h-[300px]">
+                <p className=" text-base text-gray-700 leading-loose font-semibold text-center">
                   Our vision is to be a globally trusted leader in plastic
                   packaging, known for uncompromising quality, efficiency, and
                   customer satisfaction, while continuously innovating to meet the
